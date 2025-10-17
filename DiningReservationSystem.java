@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter; //for formatting date and time displa
 public class DiningReservationSystem { //main class of the program
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in); //create scanner object to read user input
+        Scanner sc = new Scanner(System.in); //create scanner  to read user input
 
         //create a list to store all active/current reservations
         ArrayList<ArrayList<String>> reservations = new ArrayList<>();
@@ -22,11 +22,11 @@ public class DiningReservationSystem { //main class of the program
         while (true) {
             //display menu options
             System.out.println("\n=== RESTAURANT DINING RESERVATION SYSTEM ===");
-            System.out.println("k. View All Reservations");
-            System.out.println("l. Make A Reservation");
-            System.out.println("m. Delete A Reservation");
-            System.out.println("n. Generate Reservation Report");
-            System.out.println("o. Exit");
+            System.out.println("a. View All Reservations");
+            System.out.println("b. Make A Reservation");
+            System.out.println("c. Delete A Reservation");
+            System.out.println("d. Generate Reservation Report");
+            System.out.println("e. Exit");
             System.out.print("> ");
 
             //read user's menu choice, convert it to lowercase to avoid case issues
@@ -34,11 +34,11 @@ public class DiningReservationSystem { //main class of the program
 
             //switch statement to handle each menu option
             switch (choice) {
-                case "k" -> viewReservations(reservations); //view all current reservations
-                case "l" -> reservationCount = makeReservation(sc, reservations, allReservations, reservationCount); //add new reservation
-                case "m" -> deleteReservation(sc, reservations); //delete existing reservation
-                case "n" -> generateReport(allReservations); //generate report for all reservations
-                case "o" -> { //exit program
+                case "a" -> viewReservations(reservations); //view all current reservations
+                case "b" -> reservationCount = makeReservation(sc, reservations, allReservations, reservationCount); //add new reservation
+                case "c" -> deleteReservation(sc, reservations); //delete existing reservation
+                case "d" -> generateReport(allReservations); //generate report for all reservations
+                case "e" -> { //exit program
                     System.out.println("\nThank you!");
                     sc.close(); //close scanner
                     return; //exit the program
