@@ -208,11 +208,11 @@ public class DiningReservationSystem { //main class of the program
             String input = sc.nextLine().trim(); //read user input
 
             try {
-                int num = Integer.parseInt(input); //try converting to integer
+                num = Integer.parseInt(input); //try converting to integer
                 if (num >= min) //check if it meets minimum value
                     return String.valueOf(num); //return valid number as string
                 else
-                    System.out.println("Must be at least " + min + ".\n");
+                    System.out.println("Must be at least.\n");
             } catch (NumberFormatException e) { //if not a number
                 System.out.println("Invalid input. Please enter a number.\n");
             }
